@@ -14,22 +14,23 @@ from dotenv import load_dotenv
 from community import community_louvain
 # from progress.bar import IncrementalBar
 
-import warnings 
+import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # # # INSTALAR kaleido E python-louvain PELO PIP # # #
 
 load_dotenv()
-tmdb.API_KEY = os.getenv('MOVIEDB_KEY')
+tmdb.API_KEY = '55f463a58a9bbcf05fad4f6356941e06'
+
 
 class Dado:
-    def __init__(self, data = None):
+    def __init__(self, data=None):
         self.dados = data
         self.worksTogether = {}
         self.notWorksTogether = {}
         self.metricas = None
 
-         #pd.read_csv(self.caminhoArquivo, sep=';', encoding='utf-8')
+        # pd.read_csv(self.caminhoArquivo, sep=';', encoding='utf-8')
 
     def getDados(self):
         return self.dados
@@ -40,16 +41,16 @@ class Dado:
     def getColunaPorIndice(self, indice):
         return self.dados.iloc[:, indice]
 
-    def getFilmes(self, pessoa1 = None, pessoa2 = None, year = None):
+    def getFilmes(self, pessoa1=None, pessoa2=None, year=None):
 
         searchTMDB = tmdb.Search()
 
-        if (pessoa1 in self.worksTogether.keys() and pessoa2 in self.worksTogether[pessoa1].keys() 
+        if (pessoa1 in self.worksTogether.keys() and pessoa2 in self.worksTogether[pessoa1].keys()
             or pessoa2 in self.worksTogether.keys() and pessoa1 in self.worksTogether[pessoa2].keys()
             or pessoa1 in self.notWorksTogether.keys() and pessoa2 in self.notWorksTogether[pessoa1]
-            or pessoa2 in self.notWorksTogether.keys() and pessoa1 in self.notWorksTogether[pessoa2]):
+                or pessoa2 in self.notWorksTogether.keys() and pessoa1 in self.notWorksTogether[pessoa2]):
             # print("Análise feita entre {} e {}".format(pessoa1, pessoa2))
-            return       
+            return
 
         try:
             # person1 = tmdb.People(searchTMDB.person(query=pessoa1)['results'][0]['id'])
@@ -87,10 +88,12 @@ class Dado:
                     self.worksTogether[pessoa1][pessoa2] = []
 
                 try:
-                    releaseYear = int(movie['release_date'][:4]) if movie['release_date'][:4] != "" else 0
+                    releaseYear = int(
+                        movie['release_date'][:4]) if movie['release_date'][:4] != "" else 0
                     if releaseYear not in self.worksTogether[pessoa1][pessoa2] and releaseYear != 0:
                         # movieTitle = tmdb.Movies(movie['id']).info()['title']
-                        self.worksTogether[pessoa1][pessoa2].append(releaseYear)
+                        self.worksTogether[pessoa1][pessoa2].append(
+                            releaseYear)
                         # print("{} e {} trabalharam juntos em {} em {}".format(pessoa1, pessoa2, movieTitle, releaseYear))
                 except KeyError as keyError:
                     print(keyError)
@@ -103,10 +106,9 @@ class Dado:
         # for movie in (person1Movies['cast']):
         #     if pessoa1 not in self.worksTogether.keys():
         #         self.worksTogether[pessoa1] = {}
-                
+
         #     if pessoa1 not in self.notWorksTogether.keys():
         #         self.notWorksTogether[pessoa1] = []
-            
 
         #     for movie2Cast in person2Movies['cast']:
         #         if movie['id'] == movie2Cast['id']:
@@ -123,7 +125,7 @@ class Dado:
         #             self.notWorksTogether[pessoa1].append(pessoa2)
 
         #     for movie2Crew in person2Movies['crew']:
-                
+
         #         if movie['id'] == movie2Crew['id']:
         #             if pessoa2 not in self.worksTogether[pessoa1].keys():
         #                 self.worksTogether[pessoa1][pessoa2] = []
@@ -133,17 +135,17 @@ class Dado:
         #                     movieTitle = tmdb.Movies(movie['id']).info()['title']
         #                     self.worksTogether[pessoa1][pessoa2].append(releaseYear)
         #                     # print("{} e {} trabalharam juntos em {} em {}".format(pessoa1, pessoa2, movieTitle, releaseYear))
-                    
+
         #         else:
         #             self.notWorksTogether[pessoa1].append(pessoa2)
 
         # for movie in (person1Movies['crew']):
             # if pessoa1 not in self.worksTogether.keys():
             #     self.worksTogether[pessoa1] = {}
-                
+
             # if pessoa1 not in self.notWorksTogether.keys():
             #     self.notWorksTogether[pessoa1] = []
-            
+
             # # movieTitle = tmdb.Movies(movie['id']).info()['title']
 
             # for movie2Cast in person2Movies['cast']:
@@ -161,7 +163,7 @@ class Dado:
             #         self.notWorksTogether[pessoa1].append(pessoa2)
 
             # for movie2Crew in person2Movies['crew']:
-                
+
             #     if movie['id'] == movie2Crew['id']:
             #         if pessoa2 not in self.worksTogether[pessoa1].keys():
             #             self.worksTogether[pessoa1][pessoa2] = []
@@ -171,35 +173,38 @@ class Dado:
             #                 movieTitle = tmdb.Movies(movie['id']).info()['title']
             #                 self.worksTogether[pessoa1][pessoa2].append(releaseYear)
             #                 # print("{} e {} trabalharam juntos em {} em {}".format(pessoa1, pessoa2, movieTitle, releaseYear))
-                    
+
             #     else:
             #         self.notWorksTogether[pessoa1].append(pessoa2)
 
     def generateMetricas(self, dicMetricas):
         self.metricas = pd.DataFrame.from_dict(dicMetricas)
 
-        self.metricas.to_csv(os.getcwd() + '\\TrabalhoFinal\\Grafos\\Métricas por ano.csv')
-        
+        self.metricas.to_csv(
+            os.getcwd() + '\\TrabalhoFinal\\Grafos\\Métricas por ano.csv')
+
     def exportGraphToCSV(self, grafo, year):
-        nx.write_edgelist(grafo, os.getcwd() + '\\TrabalhoFinal\\Grafos\\Grafo' + str(year) + '.csv', delimiter=',', data=False)
-    
+        nx.write_edgelist(grafo, os.getcwd(
+        ) + '\\TrabalhoFinal\\Grafos\\Grafo' + str(year) + '.csv', delimiter=',', data=False)
+
+
 class Grafo:
-    def __init__(self, dados = None, grafo = None):
+    def __init__(self, dados=None, grafo=None):
         self.dados = dados
         self.dado = Dado(self.dados)
         self.metricasGrafo = {
-            "ano" : [],
-            "numeroDeNos" : [],
-            "numeroDeArestas" : [],
-            "grauMedio" : [],
-            "densidade" : [],
-            "clusterGlobal" : [],
-            "clusterMedio" : [],
-            "assortatividadeGeral" : [],
-            "assortatividadeOscar" : [],
-            "centralidadeGrau" : [],
-            "centralidadeProximidade" : [],
-            "centralidadeBetweeness" : []
+            "ano": [],
+            "numeroDeNos": [],
+            "numeroDeArestas": [],
+            "grauMedio": [],
+            "densidade": [],
+            "clusterGlobal": [],
+            "clusterMedio": [],
+            "assortatividadeGeral": [],
+            "assortatividadeOscar": [],
+            "centralidadeGrau": [],
+            "centralidadeProximidade": [],
+            "centralidadeBetweeness": []
         }
 
         if grafo is None:
@@ -210,7 +215,7 @@ class Grafo:
 
     def createGraph(self):
         self.grafo.add_nodes_from(self.dados['name'])
-        
+
         for index, row in self.dados.iterrows():
             for index2, row2 in self.dados.iterrows():
                 if row['name'] == row2['name']:
@@ -221,25 +226,28 @@ class Grafo:
                     return self.dados, self.grafo, self.dado
                     continue
 
-                print("Adicionando aresta entre {} e {}".format(row['name'], row2['name']))
+                print("Adicionando aresta entre {} e {}".format(
+                    row['name'], row2['name']))
                 try:
                     if len(self.dado.getFilmes(row['name'], row2['name'], row['year_film'])) > 0:
                         self.grafo.add_edge(row['name'], row2['name'])
                         print("Adicionado com sucesso")
                 except Exception as e:
                     print(e)
-                    print("Erro ao adicionar aresta entre {} e {}".format(row['name'], row2['name']))
+                    print("Erro ao adicionar aresta entre {} e {}".format(
+                        row['name'], row2['name']))
                     continue
-        
+
         self.drawTheGraph()
 
     def addNodes(self, datasetAno):
         for index, row in datasetAno.iterrows():
             if not self.grafo.has_node(row['name']):
-                self.grafo.add_node(row['name'])                
-                attrs = {row['name']: {"oscarWinner": row['winner'] == "True", "oscars": 0 if row['winner'] == "False" else 1, "year": row['year_film']}}
+                self.grafo.add_node(row['name'])
+                attrs = {row['name']: {"oscarWinner": row['winner'] == "True",
+                                       "oscars": 0 if row['winner'] == "False" else 1, "year": row['year_film']}}
                 nx.set_node_attributes(self.grafo, attrs)
-            
+
             else:
                 if row['winner'] == "True":
                     self.grafo.nodes[row['name']]['oscars'] += 1
@@ -247,7 +255,7 @@ class Grafo:
         print("Nós criados com sucesso")
         print("O grafo possui {} nós".format((self.grafo.number_of_nodes())))
 
-    def populateGraph(self, year): 
+    def populateGraph(self, year):
         for node in self.grafo.nodes():
             for node2 in self.grafo.nodes():
                 if node == node2:
@@ -264,7 +272,7 @@ class Grafo:
                             if year in self.dados[node][node2]:
                                 self.grafo.add_edge(node, node2)
                                 print("Aresta adicionada com sucesso")
-                        
+
                     elif node2 in self.dados.keys():
                         if node in self.dados[node2].keys():
                             if year in self.dados[node2][node]:
@@ -280,7 +288,7 @@ class Grafo:
                     traceback.print_exc()
                     continue
 
-    def calculateGraph(self, year = None):
+    def calculateGraph(self, year=None):
         degrees = []
 
         for node in self.grafo.nodes():
@@ -302,41 +310,52 @@ class Grafo:
 
         self.metricasGrafo["ano"].append(year)
         self.metricasGrafo["numeroDeNos"].append(self.grafo.number_of_nodes())
-        self.metricasGrafo["numeroDeArestas"].append(self.grafo.number_of_edges())
+        self.metricasGrafo["numeroDeArestas"].append(
+            self.grafo.number_of_edges())
         self.metricasGrafo["grauMedio"].append(np.mean(degrees))
         self.metricasGrafo["densidade"].append(nx.density(self.grafo))
         self.metricasGrafo["clusterGlobal"].append(nx.transitivity(self.grafo))
-        self.metricasGrafo["clusterMedio"].append(nx.average_clustering(self.grafo))
-        self.metricasGrafo["assortatividadeGeral"].append(nx.degree_assortativity_coefficient(self.grafo))
-        self.metricasGrafo["assortatividadeOscar"].append(nx.attribute_assortativity_coefficient(self.grafo, "oscarWinner"))
-        self.metricasGrafo["centralidadeGrau"].append(nx.degree_centrality(self.grafo))
-        self.metricasGrafo["centralidadeProximidade"].append(nx.closeness_centrality(self.grafo))
-        self.metricasGrafo["centralidadeBetweeness"].append(nx.betweenness_centrality(self.grafo))        
+        self.metricasGrafo["clusterMedio"].append(
+            nx.average_clustering(self.grafo))
+        self.metricasGrafo["assortatividadeGeral"].append(
+            nx.degree_assortativity_coefficient(self.grafo))
+        self.metricasGrafo["assortatividadeOscar"].append(
+            nx.attribute_assortativity_coefficient(self.grafo, "oscarWinner"))
+        self.metricasGrafo["centralidadeGrau"].append(
+            nx.degree_centrality(self.grafo))
+        self.metricasGrafo["centralidadeProximidade"].append(
+            nx.closeness_centrality(self.grafo))
+        self.metricasGrafo["centralidadeBetweeness"].append(
+            nx.betweenness_centrality(self.grafo))
 
         # self.dado.generateMetricas(self.metricasGrafo)
 
-
-    def drawTheGraph(self, year = None):
+    def drawTheGraph(self, year=None):
         fig = plt.figure(figsize=(24, 13.5))
 
         # for node in self.grafo.nodes():
         #     node['oscarWinner'] = self.dados.loc[self.dados['name'] == node]['winner'] == "True"
 
-
         # wins = dict.fromkeys(self.grafo.nodes(), 1)
-        nodeShape = ['*' if nx.get_node_attributes(self.grafo, "oscarWinner")[v] else 'o' for v in self.grafo.nodes()]
-        nodeSize = [nx.get_node_attributes(self.grafo, "oscars")[v] * 20 for v in self.grafo.nodes()]
-        nodeColor = ["#ffd11a" if nx.get_node_attributes(self.grafo, "oscarWinner")[v] else "#e7eb10" for v in self.grafo.nodes()]
+        nodeShape = ['*' if nx.get_node_attributes(self.grafo, "oscarWinner")[
+            v] else 'o' for v in self.grafo.nodes()]
+        nodeSize = [nx.get_node_attributes(self.grafo, "oscars")[
+            v] * 20 for v in self.grafo.nodes()]
+        nodeColor = ["#ffd11a" if nx.get_node_attributes(self.grafo, "oscarWinner")[
+            v] else "#e7eb10" for v in self.grafo.nodes()]
 
-        degree_sequence = sorted((d for n, d in self.grafo.degree()), reverse=True)
+        degree_sequence = sorted(
+            (d for n, d in self.grafo.degree()), reverse=True)
 
         axgrid = fig.add_gridspec(5, 4)
 
         ax0 = fig.add_subplot(axgrid[0:3, :])
         # Gcc = graph.subgraph(sorted(nx.connected_components(G), key=len, reverse=True)[0])
         pos = nx.spring_layout(self.grafo, seed=10396953)
-        nx.draw_networkx_nodes(self.grafo, pos, ax=ax0, node_size=nodeSize, label="Nodes", node_shape=nodeShape , node_color=nodeColor)
-        nx.draw_networkx_edges(self.grafo, pos, ax=ax0, alpha=0.4, arrowstyle='->', arrowsize=5)
+        nx.draw_networkx_nodes(self.grafo, pos, ax=ax0, node_size=nodeSize,
+                               label="Nodes", node_shape=nodeShape, node_color=nodeColor)
+        nx.draw_networkx_edges(self.grafo, pos, ax=ax0,
+                               alpha=0.4, arrowstyle='->', arrowsize=5)
         ax0.set_title("Grafo para o ano de " + str(year))
         ax0.set_axis_off()
 
@@ -351,9 +370,10 @@ class Grafo:
         # plt.show()
         if not os.path.exists(os.getcwd() + '\\TrabalhoFinal\\Grafos'):
             os.makedirs(os.getcwd() + '\\TrabalhoFinal\\Grafos')
-        fig.savefig(os.getcwd() + '\\TrabalhoFinal\\Grafos\\grafoOscar_' + str(year) + '.png')
-            
-    def drawTheGraphPlotly(self, year = None):
+        fig.savefig(
+            os.getcwd() + '\\TrabalhoFinal\\Grafos\\grafoOscar_' + str(year) + '.png')
+
+    def drawTheGraphPlotly(self, year=None):
         edge_x = []
         edge_y = []
         pos = nx.spring_layout(self.grafo, seed=10396953)
@@ -387,16 +407,18 @@ class Grafo:
             marker=dict(
                 showscale=True,
                 # colorscale options
-                #'Greys' | 'YlGnBu' | 'Greens' | 'YlOrRd' | 'Bluered' | 'RdBu' |
-                #'Reds' | 'Blues' | 'Picnic' | 'Rainbow' | 'Portland' | 'Jet' |
-                #'Hot' | 'Blackbody' | 'Earth' | 'Electric' | 'Viridis' |
+                # 'Greys' | 'YlGnBu' | 'Greens' | 'YlOrRd' | 'Bluered' | 'RdBu' |
+                # 'Reds' | 'Blues' | 'Picnic' | 'Rainbow' | 'Portland' | 'Jet' |
+                # 'Hot' | 'Blackbody' | 'Earth' | 'Electric' | 'Viridis' |
                 colorscale='RdBu',
                 reversescale=True,
-                symbol = [17 if nx.get_node_attributes(self.grafo, "oscarWinner")[v] else 0  for v in self.grafo.nodes()],
+                symbol=[17 if nx.get_node_attributes(self.grafo, "oscarWinner")[
+                    v] else 0 for v in self.grafo.nodes()],
                 color=[],
-                size= [10 + (10 * nx.get_node_attributes(self.grafo, "oscars")[v]) for v in self.grafo.nodes()],
+                size=[10 + (10 * nx.get_node_attributes(self.grafo, "oscars")[v])
+                      for v in self.grafo.nodes()],
                 colorbar=dict(
-                    thickness=15,   
+                    thickness=15,
                     title='Graus',
                     xanchor='left',
                     titleside='right'
@@ -417,20 +439,24 @@ class Grafo:
         node_trace.text = node_text
 
         fig = go.Figure(data=[edge_trace, node_trace],
-                    layout=go.Layout(
-                        title='<br>Rede de colaborações entre os indicados ao Oscar no ano de ' + str(year),
+                        layout=go.Layout(
+                        title='<br>Rede de colaborações entre os indicados ao Oscar no ano de ' +
+                            str(year),
                         titlefont_size=16,
                         showlegend=False,
                         hovermode='closest',
-                        margin=dict(b=20,l=5,r=5,t=40),
-                        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                        margin=dict(b=20, l=5, r=5, t=40),
+                        xaxis=dict(showgrid=False, zeroline=False,
+                                   showticklabels=False),
                         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False))
                         )
-        
+
         if not os.path.exists(os.getcwd() + '\\TrabalhoFinal\\Grafos'):
             os.makedirs(os.getcwd() + '\\TrabalhoFinal\\Grafos')
-        fig.write_image(os.getcwd() + '\\TrabalhoFinal\\Grafos\\grafoOscar_' + str(year) + '.png')
-        fig.write_html(os.getcwd() + '\\TrabalhoFinal\\Grafos\\grafoOscar_' + str(year) + '.html')
+        fig.write_image(
+            os.getcwd() + '\\TrabalhoFinal\\Grafos\\grafoOscar_' + str(year) + '.png')
+        fig.write_html(
+            os.getcwd() + '\\TrabalhoFinal\\Grafos\\grafoOscar_' + str(year) + '.html')
 
     def community_layout(self, partition):
         """
@@ -522,26 +548,29 @@ class Grafo:
 
         return pos
 
+
 if __name__ == '__main__':
     print("Iniciando")
 
-    dfOscarBase = pd.read_csv(os.getcwd() + '\\TrabalhoFinal\\Datasets\\oscar_dataset\\the_oscar_award.csv', encoding='utf-8')
+    dfOscarBase = pd.read_csv(os.getcwd(
+    ) + '\\TrabalhoFinal\\Datasets\\oscar_dataset\\the_oscar_award.csv', encoding='utf-8')
     for index, row in dfOscarBase.iterrows():
-        if row['year_ceremony'] < 2020:
+        if row['year_ceremony'] < 2012:
             dfOscarBase.drop(index, inplace=True)
             continue
-            
-        if search('ACTOR', row['category']) is not None or search('ACTRESS', row['category']) is not None or search('DIRECTING', row['category']) is not None: 
+
+        if search('ACTOR', row['category']) is not None or search('ACTRESS', row['category']) is not None or search('DIRECTING', row['category']) is not None:
             continue
         else:
             dfOscarBase.drop(index, inplace=True)
 
     d = Dado(dfOscarBase)
-    contador, contador2 = 1
+    contador = contador2 = 1
     for index, row in dfOscarBase.iterrows():
         print("Analisando {} de {}".format(contador, dfOscarBase.shape[0]))
         for index2, row2 in dfOscarBase.iterrows():
-            print("Analisando {} de {}".format(contador2, dfOscarBase.shape[0]))
+            print("Analisando {} de {}".format(
+                contador2, dfOscarBase.shape[0]))
             if index == index2 or row['name'] == row2['name']:
                 continue
             try:
@@ -555,14 +584,13 @@ if __name__ == '__main__':
     # for key, value in d.worksTogether.items():
     #     print(key, value)
 
-    currentYear = 2020
+    currentYear = 2012
     yearchecked = False
 
-    
     grafo = Grafo(dados=d.worksTogether)
     for index, row in dfOscarBase.iterrows():
         if row['year_ceremony'] != currentYear:
-            print(row['year_ceremony'])    
+            print(row['year_ceremony'])
             yearchecked = False
             currentYear = row['year_ceremony']
 
@@ -586,12 +614,10 @@ if __name__ == '__main__':
     partition = community_louvain.best_partition(grafo.grafo)
     pos = grafo.community_layout(partition)
     nx.draw(grafo.grafo, pos, node_color=list(partition.values()))
-    plt.savefig(os.getcwd() + '\\TrabalhoFinal\\Grafos\\grafoOscarComunidade.png')
+    plt.savefig(
+        os.getcwd() + '\\TrabalhoFinal\\Grafos\\grafoOscarComunidade.png')
 
     print("Gerando o csv com as métricas por ano")
     d.generateMetricas(grafo.metricasGrafo)
 
-
     winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
-
-    
