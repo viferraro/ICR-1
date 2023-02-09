@@ -555,7 +555,7 @@ if __name__ == '__main__':
     dfOscarBase = pd.read_csv(os.getcwd(
     ) + '\\TrabalhoFinal\\Datasets\\oscar_dataset\\the_oscar_award.csv', encoding='utf-8')
     for index, row in dfOscarBase.iterrows():
-        if row['year_ceremony'] < 2012:
+        if row['year_ceremony'] < 2007:
             dfOscarBase.drop(index, inplace=True)
             continue
 
@@ -584,7 +584,7 @@ if __name__ == '__main__':
     # for key, value in d.worksTogether.items():
     #     print(key, value)
 
-    currentYear = 2012
+    currentYear = 2007
     yearchecked = False
 
     grafo = Grafo(dados=d.worksTogether)

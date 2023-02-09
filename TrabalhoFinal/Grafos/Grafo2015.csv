@@ -20,6 +20,10 @@ Leonardo DiCaprio,Woody Harrelson
 Leonardo DiCaprio,Carey Mulligan
 Leonardo DiCaprio,Christian Bale
 Leonardo DiCaprio,Jean Dujardin
+Leonardo DiCaprio,Alejandro González Iñárritu
+Leonardo DiCaprio,Brad Pitt
+Leonardo DiCaprio,Robert De Niro
+Leonardo DiCaprio,Alejandro G. Iñárritu
 Ryan Gosling,Frank Langella
 Ryan Gosling,George Clooney
 Ryan Gosling,Philip Seymour Hoffman
@@ -35,6 +39,10 @@ Ryan Gosling,Nick Nolte
 Ryan Gosling,Bérénice Bejo
 Ryan Gosling,Jessica Chastain
 Ryan Gosling,Bradley Cooper
+Ryan Gosling,Saoirse Ronan
+Ryan Gosling,Melissa Leo
+Ryan Gosling,Christian Bale
+Ryan Gosling,Steve Carell
 Peter O'Toole,Penélope Cruz
 Peter O'Toole,Judi Dench
 Peter O'Toole,Helen Mirren
@@ -73,6 +81,8 @@ Will Smith,Woody Harrelson
 Will Smith,Woody Allen
 Will Smith,Robert De Niro
 Will Smith,Quvenzhané Wallis
+Will Smith,Hugh Jackman
+Will Smith,Lupita Nyong'o
 Forest Whitaker,Jackie Earle Haley
 Forest Whitaker,Cate Blanchett
 Forest Whitaker,Jennifer Hudson
@@ -95,6 +105,8 @@ Alan Arkin,Brad Pitt
 Alan Arkin,Amy Adams
 Alan Arkin,George Clooney
 Alan Arkin,Robert De Niro
+Alan Arkin,Marisa Tomei
+Alan Arkin,June Squibb
 Jackie Earle Haley,Jennifer Hudson
 Jackie Earle Haley,Martin Scorsese
 Jackie Earle Haley,Daniel Day-Lewis
@@ -126,6 +138,7 @@ Mark Wahlberg,Hugh Jackman
 Mark Wahlberg,Denzel Washington
 Mark Wahlberg,Stanley Tucci
 Mark Wahlberg,Steven Spielberg
+Mark Wahlberg,Morgan Freeman
 Penélope Cruz,Javier Bardem
 Penélope Cruz,Judi Dench
 Penélope Cruz,Daniel Day-Lewis
@@ -196,6 +209,7 @@ Judi Dench,Ang Lee
 Judi Dench,Steven Spielberg
 Judi Dench,Julia Roberts
 Judi Dench,Steve McQueen
+Judi Dench,Christoph Waltz
 Helen Mirren,Tony Gilroy
 Helen Mirren,Viola Davis
 Helen Mirren,Tom Wilkinson
@@ -224,6 +238,10 @@ Helen Mirren,Ang Lee
 Helen Mirren,Steven Spielberg
 Helen Mirren,Julia Roberts
 Helen Mirren,Steve McQueen
+Helen Mirren,Casey Affleck
+Helen Mirren,Geoffrey Rush
+Helen Mirren,Jessica Chastain
+Helen Mirren,Joaquin Phoenix
 Meryl Streep,Clint Eastwood
 Meryl Streep,Philip Seymour Hoffman
 Meryl Streep,George Clooney
@@ -262,6 +280,9 @@ Meryl Streep,Denzel Washington
 Meryl Streep,Ang Lee
 Meryl Streep,Julia Roberts
 Meryl Streep,Steve McQueen
+Meryl Streep,Carey Mulligan
+Meryl Streep,Helena Bonham Carter
+Meryl Streep,Reese Witherspoon
 Kate Winslet,Marion Cotillard
 Kate Winslet,Matt Damon
 Kate Winslet,Christopher Plummer
@@ -292,9 +313,16 @@ Kate Winslet,Ang Lee
 Kate Winslet,Steven Spielberg
 Kate Winslet,Julia Roberts
 Kate Winslet,Steve McQueen
+Kate Winslet,Danny Boyle
+Kate Winslet,Stanley Tucci
+Kate Winslet,Janet McTeer
+Kate Winslet,Octavia Spencer
+Kate Winslet,Michael Fassbender
 Adriana Barraza,Jeremy Renner
 Adriana Barraza,Natalie Portman
 Adriana Barraza,Anna Kendrick
+Adriana Barraza,James Franco
+Adriana Barraza,Robert Duvall
 Cate Blanchett,Julie Christie
 Cate Blanchett,Marion Cotillard
 Cate Blanchett,Laura Linney
@@ -334,6 +362,12 @@ Cate Blanchett,Ang Lee
 Cate Blanchett,Steven Spielberg
 Cate Blanchett,Julia Roberts
 Cate Blanchett,Steve McQueen
+Cate Blanchett,Christian Bale
+Cate Blanchett,Natalie Portman
+Cate Blanchett,Helena Bonham Carter
+Cate Blanchett,Kenneth Branagh
+Cate Blanchett,Rooney Mara
+Cate Blanchett,Terrence Malick
 Abigail Breslin,Johnny Depp
 Abigail Breslin,George Clooney
 Abigail Breslin,Viola Davis
@@ -416,6 +450,11 @@ Martin Scorsese,Nick Nolte
 Martin Scorsese,Denzel Washington
 Martin Scorsese,Julia Roberts
 Martin Scorsese,Steve McQueen
+Martin Scorsese,Stephen Frears
+Martin Scorsese,Brad Pitt
+Martin Scorsese,Patricia Arquette
+Martin Scorsese,Richard Linklater
+Martin Scorsese,Wes Anderson
 Clint Eastwood,George Clooney
 Clint Eastwood,Hal Holbrook
 Clint Eastwood,Amy Ryan
@@ -447,6 +486,7 @@ Clint Eastwood,Steve McQueen
 Stephen Frears,Frank Langella
 Stephen Frears,Christopher Plummer
 Stephen Frears,Helena Bonham Carter
+Stephen Frears,Michael Haneke
 Paul Greengrass,Amy Ryan
 Paul Greengrass,Matt Damon
 George Clooney,Tilda Swinton
@@ -516,6 +556,7 @@ Johnny Depp,Ron Howard
 Johnny Depp,Steven Spielberg
 Johnny Depp,Anna Kendrick
 Johnny Depp,Robert De Niro
+Johnny Depp,Benedict Cumberbatch
 Tommy Lee Jones,Javier Bardem
 Tommy Lee Jones,Stanley Tucci
 Tommy Lee Jones,Hal Holbrook
@@ -544,12 +585,17 @@ Casey Affleck,Anne Hathaway
 Casey Affleck,Matt Damon
 Casey Affleck,Jessica Chastain
 Casey Affleck,Matthew McConaughey
+Casey Affleck,Marion Cotillard
+Casey Affleck,Angelina Jolie
+Casey Affleck,Geoffrey Rush
+Casey Affleck,Joaquin Phoenix
 Javier Bardem,Tilda Swinton
 Javier Bardem,Richard Jenkins
 Javier Bardem,Brad Pitt
 Javier Bardem,Viola Davis
 Javier Bardem,Matt Damon
 Javier Bardem,Terrence Malick
+Javier Bardem,Sean Penn
 Philip Seymour Hoffman,Amy Adams
 Philip Seymour Hoffman,Viola Davis
 Philip Seymour Hoffman,Amy Ryan
@@ -576,6 +622,7 @@ Philip Seymour Hoffman,Ang Lee
 Philip Seymour Hoffman,Steven Spielberg
 Philip Seymour Hoffman,Julia Roberts
 Philip Seymour Hoffman,Steve McQueen
+Philip Seymour Hoffman,Julianne Moore
 Hal Holbrook,Christoph Waltz
 Hal Holbrook,Gus Van Sant
 Hal Holbrook,Matt Damon
@@ -606,6 +653,8 @@ Julie Christie,Richard Jenkins
 Julie Christie,Stanley Tucci
 Julie Christie,Anna Kendrick
 Julie Christie,Nick Nolte
+Julie Christie,Danny Boyle
+Julie Christie,Annette Bening
 Marion Cotillard,Laura Linney
 Marion Cotillard,Ellen Page
 Marion Cotillard,Matt Damon
@@ -636,6 +685,10 @@ Marion Cotillard,Ang Lee
 Marion Cotillard,Steven Spielberg
 Marion Cotillard,Julia Roberts
 Marion Cotillard,Steve McQueen
+Marion Cotillard,Jeff Bridges
+Marion Cotillard,Geoffrey Rush
+Marion Cotillard,Jessica Chastain
+Marion Cotillard,Michael Fassbender
 Laura Linney,Ellen Page
 Laura Linney,Marisa Tomei
 Laura Linney,Anne Hathaway
@@ -653,6 +706,9 @@ Ellen Page,Woody Allen
 Ellen Page,Jennifer Lawrence
 Ellen Page,Hugh Jackman
 Ellen Page,Michael Fassbender
+Ellen Page,Michael Shannon
+Ellen Page,Steve Carell
+Ellen Page,Julianne Moore
 Saoirse Ronan,Tilda Swinton
 Saoirse Ronan,Frank Langella
 Saoirse Ronan,Stanley Tucci
@@ -661,9 +717,14 @@ Amy Ryan,Michael Shannon
 Amy Ryan,Matt Damon
 Amy Ryan,Colin Firth
 Amy Ryan,Naomi Watts
+Amy Ryan,Jesse Eisenberg
+Amy Ryan,Steven Spielberg
 Tilda Swinton,Matt Damon
 Tilda Swinton,Christoph Waltz
 Tilda Swinton,Octavia Spencer
+Tilda Swinton,Marisa Tomei
+Tilda Swinton,Edward Norton
+Tilda Swinton,Wes Anderson
 Jason Reitman,Josh Brolin
 Jason Reitman,Angelina Jolie
 Jason Reitman,Ron Howard
@@ -680,6 +741,7 @@ Jason Reitman,Steven Spielberg
 Jason Reitman,Matthew McConaughey
 Jason Reitman,Julia Roberts
 Jason Reitman,Steve McQueen
+Jason Reitman,Naomi Watts
 Tony Gilroy,Viola Davis
 Tony Gilroy,Jeremy Renner
 Tony Gilroy,Matt Damon
@@ -687,6 +749,7 @@ Paul Thomas Anderson,Amy Adams
 Paul Thomas Anderson,Josh Brolin
 Paul Thomas Anderson,Joaquin Phoenix
 Paul Thomas Anderson,Steven Spielberg
+Paul Thomas Anderson,Quentin Tarantino
 Richard Jenkins,Brad Pitt
 Richard Jenkins,Viola Davis
 Richard Jenkins,Woody Harrelson
@@ -695,6 +758,8 @@ Richard Jenkins,Anna Kendrick
 Richard Jenkins,Nick Nolte
 Richard Jenkins,Maggie Gyllenhaal
 Richard Jenkins,Amy Adams
+Richard Jenkins,Mark Ruffalo
+Richard Jenkins,Michael Keaton
 Frank Langella,Josh Brolin
 Frank Langella,Carey Mulligan
 Frank Langella,Christopher Plummer
@@ -703,6 +768,7 @@ Frank Langella,Christoph Waltz
 Frank Langella,Nicole Kidman
 Frank Langella,Glenn Close
 Frank Langella,Quvenzhané Wallis
+Frank Langella,John Hawkes
 Sean Penn,Josh Brolin
 Sean Penn,Marisa Tomei
 Sean Penn,Brad Pitt
@@ -725,6 +791,13 @@ Brad Pitt,Michel Hazanavicius
 Brad Pitt,Quvenzhané Wallis
 Brad Pitt,Mark Ruffalo
 Brad Pitt,Julia Roberts
+Brad Pitt,Melissa Leo
+Brad Pitt,Marisa Tomei
+Brad Pitt,James Franco
+Brad Pitt,Christian Bale
+Brad Pitt,Robert De Niro
+Brad Pitt,Steve Carell
+Brad Pitt,Felicity Jones
 Mickey Rourke,Robert Downey Jr.
 Mickey Rourke,Michael Shannon
 Mickey Rourke,Josh Brolin
@@ -737,6 +810,11 @@ Josh Brolin,Nick Nolte
 Josh Brolin,Glenn Close
 Josh Brolin,Bradley Cooper
 Josh Brolin,Joaquin Phoenix
+Josh Brolin,Robert Downey Jr.
+Josh Brolin,Jeremy Renner
+Josh Brolin,John Hawkes
+Josh Brolin,Mark Ruffalo
+Josh Brolin,Keira Knightley
 Robert Downey Jr.,Amy Adams
 Robert Downey Jr.,Morgan Freeman
 Robert Downey Jr.,Matt Damon
@@ -757,6 +835,9 @@ Michael Shannon,Viola Davis
 Michael Shannon,James Franco
 Michael Shannon,Amy Adams
 Michael Shannon,Quentin Tarantino
+Michael Shannon,Steve Carell
+Michael Shannon,Julianne Moore
+Michael Shannon,Laura Dern
 Anne Hathaway,Jesse Eisenberg
 Anne Hathaway,Amy Adams
 Anne Hathaway,Morgan Freeman
@@ -777,6 +858,7 @@ Anne Hathaway,Octavia Spencer
 Anne Hathaway,Hugh Jackman
 Anne Hathaway,Matt Damon
 Anne Hathaway,Matthew McConaughey
+Anne Hathaway,Robert De Niro
 Angelina Jolie,Ron Howard
 Angelina Jolie,Matt Damon
 Angelina Jolie,Kathryn Bigelow
@@ -790,6 +872,9 @@ Angelina Jolie,Ang Lee
 Angelina Jolie,Steven Spielberg
 Angelina Jolie,Julia Roberts
 Angelina Jolie,Steve McQueen
+Angelina Jolie,Geoffrey Rush
+Angelina Jolie,Jessica Chastain
+Angelina Jolie,Joaquin Phoenix
 Melissa Leo,Amy Adams
 Melissa Leo,Jesse Eisenberg
 Melissa Leo,Viola Davis
@@ -803,6 +888,9 @@ Melissa Leo,Jessica Chastain
 Melissa Leo,Octavia Spencer
 Melissa Leo,Hugh Jackman
 Melissa Leo,Denzel Washington
+Melissa Leo,Marisa Tomei
+Melissa Leo,Christian Bale
+Melissa Leo,Steve Carell
 Amy Adams,Viola Davis
 Amy Adams,Jennifer Lawrence
 Amy Adams,Morgan Freeman
@@ -830,11 +918,16 @@ Taraji P. Henson,David Fincher
 Taraji P. Henson,Gabourey Sidibe
 Marisa Tomei,Glenn Close
 Marisa Tomei,Janet McTeer
+Marisa Tomei,Christian Bale
+Marisa Tomei,June Squibb
+Marisa Tomei,Steve Carell
 David Fincher,Christopher Plummer
 David Fincher,Danny Boyle
 David Fincher,James Cameron
 David Fincher,Sandra Bullock
 David Fincher,Rooney Mara
+David Fincher,Richard Linklater
+David Fincher,Wes Anderson
 Ron Howard,Gus Van Sant
 Ron Howard,Quentin Tarantino
 Ron Howard,James Cameron
@@ -859,11 +952,13 @@ Stephen Daldry,Max von Sydow
 Stephen Daldry,Rooney Mara
 Danny Boyle,James Cameron
 Danny Boyle,Kenneth Branagh
+Danny Boyle,Michael Fassbender
 Jeff Bridges,Matt Damon
 Jeff Bridges,Glenn Close
 Jeff Bridges,Woody Allen
 Jeff Bridges,Anna Kendrick
 Jeff Bridges,Quentin Tarantino
+Jeff Bridges,James Franco
 Colin Firth,Tom Hooper
 Colin Firth,Stanley Tucci
 Colin Firth,Kenneth Branagh
@@ -909,6 +1004,7 @@ Matt Damon,Steven Spielberg
 Matt Damon,Matthew McConaughey
 Matt Damon,Julia Roberts
 Matt Damon,Steve McQueen
+Matt Damon,Chiwetel Ejiofor
 Woody Harrelson,Quentin Tarantino
 Woody Harrelson,Stanley Tucci
 Woody Harrelson,Gabourey Sidibe
@@ -918,13 +1014,18 @@ Woody Harrelson,Christian Bale
 Woody Harrelson,Mark Ruffalo
 Woody Harrelson,Woody Allen
 Woody Harrelson,Robert De Niro
+Woody Harrelson,Julianne Moore
 Christopher Plummer,Helena Bonham Carter
+Christopher Plummer,Annette Bening
 Stanley Tucci,Anna Kendrick
 Stanley Tucci,Jennifer Lawrence
 Stanley Tucci,Nick Nolte
 Stanley Tucci,Octavia Spencer
 Stanley Tucci,Christoph Waltz
 Stanley Tucci,Steven Spielberg
+Stanley Tucci,Mark Ruffalo
+Stanley Tucci,Michael Keaton
+Stanley Tucci,Julianne Moore
 Christoph Waltz,James Franco
 Christoph Waltz,Quentin Tarantino
 Christoph Waltz,Jonah Hill
@@ -932,6 +1033,10 @@ Christoph Waltz,Sandra Bullock
 Sandra Bullock,James Cameron
 Sandra Bullock,Demián Bichir
 Sandra Bullock,Melissa McCarthy
+Sandra Bullock,Geoffrey Rush
+Sandra Bullock,Steve Carell
+Sandra Bullock,Michael Keaton
+Carey Mulligan,Helena Bonham Carter
 Vera Farmiga,John Hawkes
 Maggie Gyllenhaal,Christian Bale
 Maggie Gyllenhaal,Gary Oldman
@@ -939,6 +1044,8 @@ Maggie Gyllenhaal,Michael Fassbender
 Anna Kendrick,Quentin Tarantino
 Anna Kendrick,Nick Nolte
 Anna Kendrick,Jacki Weaver
+Anna Kendrick,Hailee Steinfeld
+James Cameron,J.K. Simmons
 Kathryn Bigelow,Jessica Chastain
 Kathryn Bigelow,Annette Bening
 Kathryn Bigelow,Nicole Kidman
@@ -951,6 +1058,8 @@ Kathryn Bigelow,Julia Roberts
 Kathryn Bigelow,Steve McQueen
 Quentin Tarantino,Jonah Hill
 Quentin Tarantino,Matthew McConaughey
+Quentin Tarantino,Demián Bichir
+Quentin Tarantino,Bruce Dern
 Lee Daniels,Nicole Kidman
 Jesse Eisenberg,Woody Allen
 Jesse Eisenberg,Mark Ruffalo
@@ -961,13 +1070,20 @@ James Franco,Michelle Williams
 James Franco,Jonah Hill
 James Franco,Rooney Mara
 James Franco,Gary Oldman
+James Franco,Nicole Kidman
+James Franco,Robert Duvall
+James Franco,Felicity Jones
 Christian Bale,Gary Oldman
 Christian Bale,Jennifer Lawrence
 Christian Bale,David O. Russell
 Christian Bale,Bradley Cooper
 Christian Bale,Robert De Niro
+Christian Bale,Natalie Portman
+Christian Bale,Terrence Malick
+Christian Bale,Steve Carell
 John Hawkes,Mark Ruffalo
 John Hawkes,Glenn Close
+John Hawkes,Keira Knightley
 Mark Ruffalo,Michelle Williams
 Mark Ruffalo,Hailee Steinfeld
 Mark Ruffalo,Demián Bichir
@@ -976,6 +1092,11 @@ Mark Ruffalo,Jessica Chastain
 Mark Ruffalo,Octavia Spencer
 Mark Ruffalo,Kenneth Branagh
 Mark Ruffalo,Julia Roberts
+Mark Ruffalo,Michael Keaton
+Geoffrey Rush,Jessica Chastain
+Geoffrey Rush,Joaquin Phoenix
+Geoffrey Rush,Steve Carell
+Geoffrey Rush,Michael Keaton
 Annette Bening,Nicole Kidman
 Annette Bening,Nick Nolte
 Annette Bening,Glenn Close
@@ -997,14 +1118,17 @@ Nicole Kidman,Steven Spielberg
 Nicole Kidman,Sally Hawkins
 Nicole Kidman,Julia Roberts
 Nicole Kidman,Steve McQueen
+Nicole Kidman,Chiwetel Ejiofor
 Jennifer Lawrence,Jacki Weaver
 Jennifer Lawrence,David O. Russell
 Jennifer Lawrence,Bradley Cooper
 Jennifer Lawrence,Robert De Niro
 Jennifer Lawrence,Hugh Jackman
 Jennifer Lawrence,Michael Fassbender
+Jennifer Lawrence,Julianne Moore
 Natalie Portman,Darren Aronofsky
 Natalie Portman,Kenneth Branagh
+Natalie Portman,Terrence Malick
 Michelle Williams,Hailee Steinfeld
 Michelle Williams,Demián Bichir
 Michelle Williams,Bérénice Bejo
@@ -1012,32 +1136,40 @@ Michelle Williams,Jessica Chastain
 Michelle Williams,Octavia Spencer
 Helena Bonham Carter,Tom Hooper
 Helena Bonham Carter,Steven Spielberg
+Helena Bonham Carter,Kenneth Branagh
 Hailee Steinfeld,Demián Bichir
 Hailee Steinfeld,Bérénice Bejo
 Hailee Steinfeld,Jessica Chastain
 Hailee Steinfeld,Octavia Spencer
 Hailee Steinfeld,Nick Nolte
+Hailee Steinfeld,Julia Roberts
+Hailee Steinfeld,Ethan Hawke
 Jacki Weaver,David O. Russell
 Jacki Weaver,Woody Allen
 Darren Aronofsky,Nick Nolte
 David O. Russell,Bradley Cooper
 David O. Russell,Robert De Niro
 Tom Hooper,Hugh Jackman
+Tom Hooper,Eddie Redmayne
 Demián Bichir,Bérénice Bejo
 Demián Bichir,Jessica Chastain
 Demián Bichir,Melissa McCarthy
 Demián Bichir,Octavia Spencer
+Demián Bichir,Bruce Dern
 Jean Dujardin,Bérénice Bejo
 Jean Dujardin,Michel Hazanavicius
 Jean Dujardin,Jonah Hill
 Gary Oldman,Jessica Chastain
 Gary Oldman,Steve McQueen
+Jonah Hill,Felicity Jones
 Nick Nolte,Glenn Close
 Nick Nolte,Denzel Washington
 Nick Nolte,Ang Lee
 Nick Nolte,Steven Spielberg
 Nick Nolte,Julia Roberts
 Nick Nolte,Steve McQueen
+Nick Nolte,Rosamund Pike
+Max von Sydow,Lupita Nyong'o
 Glenn Close,Woody Allen
 Glenn Close,Janet McTeer
 Glenn Close,Hugh Jackman
@@ -1047,15 +1179,27 @@ Glenn Close,Ang Lee
 Glenn Close,Steven Spielberg
 Glenn Close,Julia Roberts
 Glenn Close,Steve McQueen
+Glenn Close,Octavia Spencer
 Rooney Mara,Joaquin Phoenix
+Rooney Mara,Melissa McCarthy
+Rooney Mara,Hugh Jackman
+Rooney Mara,Michael Fassbender
 Bérénice Bejo,Michel Hazanavicius
 Bérénice Bejo,Jessica Chastain
 Bérénice Bejo,Octavia Spencer
 Jessica Chastain,Octavia Spencer
 Jessica Chastain,Hugh Jackman
 Jessica Chastain,Matthew McConaughey
+Jessica Chastain,Joaquin Phoenix
+Jessica Chastain,Chiwetel Ejiofor
 Melissa McCarthy,Bradley Cooper
 Melissa McCarthy,Naomi Watts
+Melissa McCarthy,Michael Fassbender
+Janet McTeer,Octavia Spencer
+Janet McTeer,Quvenzhané Wallis
+Janet McTeer,Naomi Watts
+Octavia Spencer,Quvenzhané Wallis
+Octavia Spencer,Naomi Watts
 Alexander Payne,Woody Allen
 Alexander Payne,Robert De Niro
 Alexander Payne,Michael Haneke
@@ -1063,11 +1207,16 @@ Alexander Payne,Ang Lee
 Woody Allen,Robert De Niro
 Woody Allen,Michael Haneke
 Woody Allen,Ang Lee
+Woody Allen,Joaquin Phoenix
+Woody Allen,Emma Stone
 Bradley Cooper,Robert De Niro
+Bradley Cooper,Emma Stone
 Hugh Jackman,Naomi Watts
 Hugh Jackman,Matthew McConaughey
 Hugh Jackman,Michael Fassbender
+Hugh Jackman,Lupita Nyong'o
 Joaquin Phoenix,Helen Hunt
+Joaquin Phoenix,Emma Stone
 Denzel Washington,Ang Lee
 Denzel Washington,Steven Spielberg
 Denzel Washington,Julia Roberts
@@ -1081,4 +1230,14 @@ Ang Lee,Julia Roberts
 Ang Lee,Steve McQueen
 Steven Spielberg,Julia Roberts
 Steven Spielberg,Steve McQueen
+Steven Spielberg,Reese Witherspoon
+Chiwetel Ejiofor,Julia Roberts
 Julia Roberts,Steve McQueen
+Steve Carell,Michael Keaton
+Steve Carell,Julianne Moore
+Eddie Redmayne,Felicity Jones
+Ethan Hawke,Patricia Arquette
+Ethan Hawke,Richard Linklater
+Edward Norton,Wes Anderson
+Patricia Arquette,Richard Linklater
+Richard Linklater,Wes Anderson
